@@ -1,5 +1,6 @@
 
 import { Github, Linkedin, Download } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   return (
@@ -71,7 +72,7 @@ const Hero = () => {
               <div className="w-64 h-64 bg-white/30 rounded-full flex items-center justify-center">
                 <div className="w-64 h-64 rounded-full overflow-hidden">
   <img
-    src="/src/assets/profile.jpg"
+    src={profileImage}
     alt="Profile"
     className="w-full h-full object-cover"
   />
