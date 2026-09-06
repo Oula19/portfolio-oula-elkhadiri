@@ -12,15 +12,44 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulation d'envoi du formulaire
-    toast({
-      title: "Message envoyé !",
-      description: "Je vous répondrai dans les plus brefs délais.",
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch("https://formspree.io/f/mrpgajny", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formData),
     });
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
+
+    if (response.ok) {
+      toast({
+        title: "Message envoyé !",
+        description: "Je vous répondrai dans les plus brefs délais.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      toast({
+        title: "Erreur",
+        description: "Impossible d'envoyer le message. Veuillez réessayer.",
+      });
+    }
+  } catch (error) {
+    toast({
+      title: "Erreur",
+      description: "Une erreur est survenue. Veuillez réessayer.",
+    });
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
