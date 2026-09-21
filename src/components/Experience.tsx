@@ -28,8 +28,8 @@ const Experience = () => {
     <section id="experience" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Expérience Professionnelle</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Expérience Professionnelle</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Mon parcours professionnel dans le développement web
           </p>
         </div>
@@ -38,34 +38,34 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={exp.company}
-              className="bg-accent rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up"
+              className="bg-accent rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div className="flex items-center gap-3 mb-2 md:mb-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Briefcase className="text-primary" size={24} />
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                <div className="flex items-center gap-3 mb-2 sm:mb-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Briefcase className="text-primary w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary">{exp.company}</h3>
-                    <p className="text-lg text-gray-700 font-semibold">{exp.role}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-primary">{exp.company}</h3>
+                    <p className="text-base sm:text-lg text-gray-700 font-semibold">{exp.role}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Calendar size={18} />
+                <div className="flex items-center gap-2 text-gray-600 text-sm sm:text-base">
+                  <Calendar className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
                   <span className="font-medium">{exp.period}</span>
                 </div>
               </div>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">{exp.description}</p>
+              <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base">{exp.description}</p>
 
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-800 mb-2">Technologies utilisées :</h4>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">Technologies utilisées :</h4>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
+                      className="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -74,8 +74,8 @@ const Experience = () => {
               </div>
 
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">Responsabilités :</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-600">
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">Responsabilités :</h4>
+                <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm sm:text-base">
                   {exp.details.map((detail, idx) => (
                     <li key={idx}>{detail}</li>
                   ))}

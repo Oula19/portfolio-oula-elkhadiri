@@ -54,20 +54,20 @@ const Skills = () => {
     <section id="skills" className="section-padding bg-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Mes Compétences</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Mes Compétences</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Une expertise technique diversifiée pour répondre à tous vos besoins de développement
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title} 
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
+              className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up"
               style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
-              <h3 className="text-xl font-semibold text-primary mb-6 text-center">
+              <h3 className="text-lg sm:text-xl font-semibold text-primary mb-4 sm:mb-6 text-center">
                 {category.title}
               </h3>
               <div className="space-y-4">

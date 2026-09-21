@@ -62,52 +62,52 @@ const handleSubmit = async (e: React.FormEvent) => {
     <section id="contact" className="section-padding bg-accent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Contactez-moi</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Contactez-moi</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Prête à discuter de votre prochain projet ? N'hésitez pas à me contacter !
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Informations de contact */}
           <div className="animate-slide-in-left">
-            <h3 className="text-2xl font-semibold text-primary mb-8">Restons en contact</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-6 sm:mb-8">Restons en contact</h3>
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Mail className="text-primary" size={20} />
+                  <Mail className="text-primary w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Email</h4>
-                  <p className="text-gray-600">elkhadirioula@gmail.com</p>
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">Email</h4>
+                  <p className="text-gray-600 text-sm sm:text-base">elkhadirioula@gmail.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Phone className="text-primary" size={20} />
+                  <Phone className="text-primary w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Téléphone</h4>
-                  <p className="text-gray-600">06 17 29 79 60</p>
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">Téléphone</h4>
+                  <p className="text-gray-600 text-sm sm:text-base">06 17 29 79 60</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="text-primary" size={20} />
+                  <MapPin className="text-primary w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Localisation</h4>
-                  <p className="text-gray-600">Casablanca , Maroc</p>
+                  <h4 className="font-semibold text-gray-800 text-sm sm:text-base">Localisation</h4>
+                  <p className="text-gray-600 text-sm sm:text-base">Casablanca , Maroc</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-br from-primary to-primary-royal rounded-xl text-white">
-              <h4 className="font-semibold mb-2">Disponible pour de nouveaux projets</h4>
-              <p className="text-blue-100">
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-br from-primary to-primary-royal rounded-xl text-white">
+              <h4 className="font-semibold mb-2 text-sm sm:text-base">Disponible pour de nouveaux projets</h4>
+              <p className="text-blue-100 text-sm sm:text-base">
                 Je suis actuellement disponible pour des missions de développement 
                 web full-stack. N'hésitez pas à me faire part de vos besoins !
               </p>
@@ -116,10 +116,10 @@ const handleSubmit = async (e: React.FormEvent) => {
 
           {/* Formulaire de contact */}
           <div className="animate-fade-in-up">
-            <form onSubmit={handleSubmit} className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <form onSubmit={handleSubmit} className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                     Nom complet
                   </label>
                   <input
@@ -129,12 +129,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 text-sm sm:text-base"
                     placeholder="Votre nom"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                     Email
                   </label>
                   <input
@@ -144,14 +144,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 text-sm sm:text-base"
                     placeholder="votre@email.com"
                   />
                 </div>
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="mb-4 sm:mb-6">
+                  <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                   Sujet
                 </label>
                 <input
@@ -161,13 +161,13 @@ const handleSubmit = async (e: React.FormEvent) => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
-                  placeholder="Sujet de votre message"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 text-sm sm:text-base"
+                    placeholder="Sujet de votre message"
                 />
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="mb-4 sm:mb-6">
+                  <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
@@ -177,14 +177,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 resize-none"
-                  placeholder="Décrivez votre projet ou votre demande..."
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 resize-none text-sm sm:text-base"
+                    placeholder="Décrivez votre projet ou votre demande..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-royal transition-colors duration-300 flex items-center justify-center gap-2"
+                className="w-full bg-primary text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-primary-royal transition-colors duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 <Send size={20} />
                 Envoyer le message

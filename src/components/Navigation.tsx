@@ -43,21 +43,21 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           <div
-            className="text-2xl font-bold text-primary cursor-pointer"
+            className="text-lg sm:text-xl md:text-2xl font-bold text-primary cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
             Oula Elkhadiri
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors duration-300 hover:text-primary-royal font-medium ${
+                className={`transition-colors duration-300 hover:text-primary-royal font-medium text-sm sm:text-base ${
                   isScrolled ? "text-gray-700" : "text-white"
                 }`}
               >
@@ -67,7 +67,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`transition-colors duration-300 ${
@@ -81,13 +81,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md rounded-lg mb-4 animate-fade-in">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md rounded-lg mb-4 animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-primary-royal font-medium transition-colors duration-300"
+                  className="block w-full text-left px-3 py-3 text-gray-700 hover:text-primary-royal font-medium transition-colors duration-300 text-base"
                 >
                   {item.name}
                 </button>

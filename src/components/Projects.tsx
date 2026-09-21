@@ -45,13 +45,13 @@ liveUrl: null
     <section id="projects" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">Mes Projets</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Mes Projets</h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Découvrez une sélection de mes réalisations, des e-commerces aux applications métiers
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <div 
               key={project.title}
@@ -62,20 +62,20 @@ liveUrl: null
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  className="w-full h-40 sm:h-48 object-cover transition-transform duration-300 hover:scale-110"
                 />
                 
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-primary mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
+                      className="px-2 sm:px-3 py-1 bg-primary/10 text-primary text-xs sm:text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -88,7 +88,7 @@ liveUrl: null
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-royal transition-colors duration-300"
+                      className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-royal transition-colors duration-300 text-sm sm:text-base"
                     >
                       <ExternalLink size={16} />
                       Voir le site
