@@ -9,7 +9,13 @@ const Experience = () => {
       description: "Développement de MedConvoy Compass, application de gestion des convois médicaux.",
       technologies: ["React.js", "Spring Boot", "MySQL", "JWT", "Docker"],
       details: [
-        "Développement et intégration d'API REST"
+         "Conception et développement complet de l’application Frontend et Backend.",
+        "Développement et intégration des API REST avec Spring Boot.",
+        "Développement des interfaces utilisateur avec React.js.",
+        "Mise en place de l’authentification et de la gestion des accès avec JWT.",
+        "Conception et gestion de la base de données MySQL.",
+        "Réalisation des tests et vérifications fonctionnelles de l’application.",
+        "Conteneurisation et déploiement de l’application avec Docker."
       ]
     },
     {
@@ -19,7 +25,9 @@ const Experience = () => {
       description: "Développement d'une application web de gestion de pharmacie.",
       technologies: ["React.js", "Tailwind CSS", "Laravel", "MySQL"],
       details: [
-        "Développement et consommation d'API REST"
+       "Développement des interfaces web avec React.js et Tailwind CSS.",
+       "Développement et consommation d’API REST avec Laravel.",
+       "Participation à la gestion et à l’intégration de la base de données MySQL."
       ]
     }
   ];
