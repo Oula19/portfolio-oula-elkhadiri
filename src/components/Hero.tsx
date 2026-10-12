@@ -29,7 +29,7 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
           <a
-  href="https://drive.google.com/file/d/12dnCVV3QnOs0U5CCF_eQSxCaF1JqAk0f/view?usp=sharing"
+  href="https://drive.google.com/file/d/1EhVtER5gE0KWuRD8rwFs-1I9cfKCqFr2/view?usp=drive_link"
   target="_blank"
   rel="noopener noreferrer"
   className="bg-white text-primary px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-sm sm:text-base"
